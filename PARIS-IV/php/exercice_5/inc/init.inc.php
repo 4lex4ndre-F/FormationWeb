@@ -18,7 +18,7 @@ $erreur = "";
 // ---------------------------------- LIENS INTERNES AU SITE ----------------------------------
 // définition de constante pour le chemin absolu ainsi que pour la racine serveur
 // racine site
-define("URL", "/FORMATION/PARIS-IV/php/exercice_5/"); // modifier le repository chez moi
+define("URL", "/FORMATION/FormationWeb/PARIS-IV/php/exercice_5/"); // modifier le repository chez moi
 
 //racine serveur - nécessaire pour les pièces jointes
 // DOCUMENT_ROOT dans $_SERVER
