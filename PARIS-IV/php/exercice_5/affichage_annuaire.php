@@ -2,9 +2,9 @@
 // APPEL DE INIT.INC.PHP
 require("inc/init.inc.php");
 
-// requete en-t^^ete tableau
-$en_tete = $pdo->query("SELECT * FROM annuaire");
-$nb_col = $en_tete->columnCount();
+// requete en-teete tableau
+$req = $pdo->query("SELECT * FROM annuaire");
+$nb_col = $req->columnCount();
 
 
 // Affichage sur la page
@@ -30,7 +30,7 @@ require("inc/nav.inc.php");
                 echo '<thead>';
                     echo '<tr>';          
                         for ($i=0; $i < $nb_col ; $i++) { 
-                            $col_table = $en_tete->getColumnMeta($i);
+                            $col_table = $req->getColumnMeta($i);
                             //echo '<pre>';  print_r($no['name']); echo '</pre>';
                             echo '<th>' . $col_table['name'] . '</th>';
                         }
@@ -39,7 +39,17 @@ require("inc/nav.inc.php");
 
                 // le reste du tableau:
                 echo '<tbody>';
-                
+                    while($contact = $req->fetch(PDO::FETCH_ASSOC))
+                    {
+                        echo '<tr>';
+
+                        foreach($contact AS $indice => $valeur)
+                        {
+                            echo '<td>' . $valeur . '</td>';
+                        }
+
+                        echo '</tr>';
+                    }
                 echo '</tbody>';
 
             echo '</table>';
