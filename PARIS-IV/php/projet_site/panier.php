@@ -6,7 +6,7 @@ $erreur = "";
 // Exercice:
 // 1. modifier le projet site afin d'avoir la photo dans le panier et de l'afficher sur la page panier.
 // 2. Afficher le prix total par ligne pour chaque article.
-// 3.Mettre en place des filtres de recherche sur la page boutique (couleur / taille / sexe / prix / mot- clé)
+// 3. Mettre en place des filtres de recherche sur la page boutique (couleur / taille / sexe / prix / mot- clé)
 // 4. envoyer un mail au client
 **********************************************************************************************************************/ 
 
