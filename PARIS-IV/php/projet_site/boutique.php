@@ -62,7 +62,7 @@ $liste_couleur = $pdo->query("SELECT DISTINCT couleur FROM article ORDER BY coul
 $liste_taille = $pdo->query("SELECT DISTINCT taille FROM article ORDER BY taille");
 
 /******************************************************************************************************
-                                        RECHERCHE
+                                            RECHERCHE
 ******************************************************************************************************/
 // déclaration d'une variable de récupération du terme recherché
 $demande = "";
@@ -81,7 +81,7 @@ $req = $pdo->prepare("SELECT * FROM article WHERE titre LIKE :titre OR descripti
 $req->bindParam(':titre',$demande, PDO::PARAM_STR);
 $req->bindParam(':description',$demande, PDO::PARAM_STR);
 $req->execute();
-
+//*****************************************************************************************************
 // préparation d'une requete pour les filtres
 
 
@@ -219,7 +219,7 @@ echo '<pre>'; print_r($_POST); echo '</pre>';
             <!-- articles -->
             <div class="col-sm-10">
                 <?php
-                    // vérification de la demande par l'utilisateur d'une recherche sur mot clé
+                    // vérification de la demande par l'utilisateur d'une recherche sur mot clé ***********************************************
                     if(isset($_POST['recherche']) && !empty($_POST['recherche']))
                     {
                         $message .= '<div class="alert alert-success" role="alert" style="margin-top: 20px;">Vous avez recherché le terme "' . $_POST['recherche'] . '"</div>';
