@@ -212,7 +212,7 @@ echo '<pre>'; print_r($donnees); echo '</pre>';
 
 
 // implode() & explode() - fonctions prédéfinies php
-// implode() permet d'afficher tous les élémnets d'un tableau array séparées par un séparateur fourni en 1er argument
+// implode() permet d'afficher tous les éléments d'un tableau array séparées par un séparateur fourni en 1er argument
 // explode() découpe une chaine de caractère selon un séparateur fourni en 1er argument et place chaque segment de cette chaîne dans un tableau array
 // exemple:
 echo implode('<br />', $donnees);
