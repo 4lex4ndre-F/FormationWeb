@@ -19,3 +19,7 @@ j-2:
 J3-4:
 -----
 13-Mini-framework-maison (site boutique OO-MVC)
+
+Rremarques: 
+    En développement orienté objet, chaque fichier correspond à une classe.
+    
