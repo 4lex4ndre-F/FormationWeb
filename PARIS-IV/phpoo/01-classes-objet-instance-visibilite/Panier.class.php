@@ -2,7 +2,7 @@
 //01-classes-objet-instance-visibilite/Panier.class.php
 /* En objet :
     Variable = Propriété
-    Foncton = Méthode
+    Fonction = Méthode
 */
 
 // nom de classe avec une majuscule par convention
@@ -53,7 +53,7 @@ echo 'Panier : ' . $panier -> ajouterProduit() . ' <br />';
 //echo 'Panier : ' . $panier -> retirerProduit() . ' <br />';
 //echo 'Panier : ' . $panier -> affichagePanier() . ' <br />';
 
-// En l'état, seuls les éléments public sont accessibles...$_COOKIE
+// En l'état, seuls les éléments public sont accessibles...
 
 $panier2 = new panier;
 echo '<pre>'; var_dump($panier2); echo '</pre>'; // #2
@@ -61,7 +61,7 @@ echo '<pre>'; var_dump($panier2); echo '</pre>'; // #2
 
 /*
 Commentaires :
-    - new est un mot-clé qui permet de créer un objet d'une classe. On parle d'instanciation.$_COOKIE
+    - new est un mot-clé qui permet de créer un objet d'une classe. On parle d'instanciation.
     - On peut créer plusieurs objets d'une même classe
     - Niveau de visibilité :
         --> public : Les éléments sont accessibles de partout

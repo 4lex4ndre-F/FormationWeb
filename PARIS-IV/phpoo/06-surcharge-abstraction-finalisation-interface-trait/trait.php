@@ -27,7 +27,5 @@ class Site
 Commentaires:
     - Les traits ont été inventés pour repousser l'héritage non multiple du PHP.
     - Une classe peut hériter d'une seule classe mais elle peut importer plusieurs traits.
-    - Un trait peut importer un autre trait.
-
-    - 
+    - Un trait peut importer un autre trait. 
 */

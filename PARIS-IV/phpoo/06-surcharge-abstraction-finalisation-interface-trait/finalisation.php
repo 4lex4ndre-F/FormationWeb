@@ -28,9 +28,9 @@ class Extension2 extends Application2
 
 /*
 Commentaires:
-    - Une classe finale ne peut pas être héritée.
-    - une classe finale peut être instanciée.
+    - Une classe final ne peut pas être héritée.
+    - une classe final peut être instanciée.
 
-    - Une méthode finale peut être présente dans une classe normale.
-    - Une méthode finale ne peut pas être surchargée, ni redéfinie.
+    - Une méthode final peut être présente dans une classe normale.
+    - Une méthode final ne peut pas être surchargée, ni redéfinie.
 */

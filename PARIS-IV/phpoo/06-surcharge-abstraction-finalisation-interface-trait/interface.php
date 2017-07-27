@@ -1,6 +1,5 @@
 <?php
-//06-surcharge-abstraction-finalisation-interface-trait/interface.php_ini_loaded_file
-
+//06-surcharge-abstraction-finalisation-interface-trait/interface.php
 interface Mouvement
 {
     public function start();
@@ -43,5 +42,5 @@ Commentaires:
 
     - Il est possible d'implémenter plusieurs interfaces (class H implements I, J).
     - Une classe peut hériter d'une autre et en même temps implémenter une ou plusieurs interfaces(s).
-    - Les méthodes d'une interface sont forcément public, sinon elles ne pourraient pas être redéfinies.    
+    - Les méthodes d'une interface sont forcément public, sinon elles ne pourraient pas être redéfinies.
 */
