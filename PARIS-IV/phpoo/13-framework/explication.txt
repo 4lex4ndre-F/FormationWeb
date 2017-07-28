@@ -35,3 +35,51 @@ src/
     Model/
         ArticleModel.php : Ce fichier contiendra toutes les fonctions (requetes) liées à l'entité article et demandera à Model.php d'éxécuter des requêtes génériques !
         Si une entité a besoin de requêtes spécifiques (exemple : jointure) alors elles seront codées dans ce fichier.
+
+vendor/
+    Controller/
+        Controller.php : C'est le controller général de l'application, il a pour objectif d'effectuer 2 missions :
+            1/ Récupérer le bon Model en fonction de l'entité dans laquelle nous sommes (getModel())
+            2/ Afficher la bonne vue avec les variables nécessaires à l'affichage (render())
+
+src/
+    Controller/
+        ArticleController.php : Cette classe hérite du controller général de l'application, et permet de déclencher toutes les actions liées à l'entité article.
+
+src/
+    View/
+        Article/
+            boutique.php, fiche_article.php : On récupère les fichiers crées en procédural avec quelques modifications :
+                1/ Header, nav et footer sont ré-incorporés (temporairement)
+                2/ On retire tous les traitements PHP
+                3/ Simplification du PHP à l'interieur de l'HTML (formes ternaires et conttractées)
+                4/ On remplace l'appel aux array, par des objetsexemple : $article['prix] devient $article -> getPrix()
+
+web/
+    css/, fonts/, js/, img/, photo/ : On récupère les ressources (assets) du site en procédural. Toutes les vues du site feront appel à ses ressources directement via le nom du dossier.
+
+src/
+    View/
+        Layout.html : ce fichie représente la structure de base d'une page (header, nav, footer). Si nécessaire; il peut y avoir plusieurs layout (exemple: la home peut avoir une structure très différente de la page mention légale).
+        Le contenu de chaque vue sera représenté dans les layout par une variable ($content)
+
+vendor/
+    Controller/
+        Controller.php : Ajout de la méthode render()
+        + modification des Controleurs + modification des vues en .html
+
+vendor/
+    Manager/
+        Application.php : C'est la classe qui est capable de lancer mon application. Elle va récupérer les informations dans l'URL (construct()), elle va instancier le bon controller et lancer la bonne methode (run()).
+        ===> C'est mon "interrupteur".
+        + modification de index.php
+        +modification de tous les liens du site
+
+==> Ajout de fonctionnalités :
+    - formulaire de recherche
+    - suggestion de produit
+    - connexion
+    - commentaires sur les articles
+    - metions légale
+    - routes ?
+    - mettre un site en ligne

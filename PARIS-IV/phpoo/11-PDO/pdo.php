@@ -8,7 +8,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=wf3_entreprise', 'root', '', array(
 
 // interessant lors du developpement
 try{
-    // erreur de requete volontaire :
+    //erreur de requete volontaire :
     //$resultat = $pdo -> query("hfhzr");
 }
 catch(PDOException $e){

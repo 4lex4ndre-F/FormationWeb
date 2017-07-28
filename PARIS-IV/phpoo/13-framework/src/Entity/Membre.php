@@ -92,5 +92,4 @@ class Membre
     public function setStatut($arg){
         $this -> statut = $arg;
     }
-
 }

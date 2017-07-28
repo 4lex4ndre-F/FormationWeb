@@ -52,7 +52,7 @@ spl_autoload_register(array('Autoload', 'inclusion_automatique'));
 //------------------------------------------------------------------
 /*
 Commentaires:
-    spl_autoload_register() en POO attend en argument un array avec les valuers suivantes:
+    spl_autoload_register() en POO attend en argument un array avec les valeurs suivantes:
         1- le nom de la classe
         2- le nom de la méthode qui va être static (OBLIGATOIREMENT)
         ---> Autoload::inclusion_automatique($className);

@@ -64,4 +64,6 @@ class ArticleModel extends Model
             return $articles;
         }        
     }
+
+    // ajouter requetes pour tailles et couleur (getAllTaille + getArticlesBytaille) + requete jointe couleur + taille
 }

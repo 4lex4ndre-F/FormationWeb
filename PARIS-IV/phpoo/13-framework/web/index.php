@@ -1,12 +1,18 @@
 <?php
 //web/index.php
+// seul fichier à exécuter car il require l'autoload.
 
 session_start(); 
 require_once __DIR__ . '/../vendor/autoload.php';
 
 //Lancement de l'application (interupteur) : 
-// $app = new Application;
-// $app -> run(); 
+$app = new Manager\Application;
+$app -> run();
+
+//Test FINAL: 
+//web/index.php?controller=article&action=afficheall
+//web/index.php?controller=article&action=affiche&id=36
+//web/index.php?controller=article&action=categorie&cat=chemise
 
 //TEST 1 : Entity
 // $article = new Entity\Article; 
@@ -67,34 +73,21 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 
 // Test 4 : ArticleModel
-$am = new Model\ArticleModel;
+//$am = new Model\ArticleModel;
 
-$produits = $am -> getAllArticles();
-$produit = $am -> getArticleById(6);
-$categories = $am -> getAllCategories();
-$produit2 = $am -> getAllArticlesByCategorie('Chemise');
+//$produits = $am -> getAllArticles();
+//$produit = $am -> getArticleById(6);
+//$categories = $am -> getAllCategories();
+//$produit2 = $am -> getAllArticlesByCategorie('Chemise');
 
-echo '<pre>';
-print_r($categories);
-echo '</pre>'; 
-
-
+//echo '<pre>';
+//print_r($categories);
+//echo '</pre>';
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Test 5 : ArticleController
+//$ac = new Controller\ArticleController;
+//$ac -> afficheAll();
+//$ac -> affiche(37);
+//$ac -> categorie('chemise');
 
